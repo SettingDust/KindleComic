@@ -47,12 +47,6 @@
 			<div class='menu'>
 				<ul class='h-list'>
 					
-						<li>
-							<a class='flat-box nav-home' href='/'>
-								首页
-							</a>
-						</li>
-					
 				</ul>
 				<div class='underline'></div>
 			</div>
@@ -88,10 +82,6 @@
 <aside class="menu-phone">
 	<nav>
 		
-			<a href="/" class="nav-home nav">
-				首页
-			</a>
-		
 	</nav>
 </aside>
 
@@ -104,62 +94,109 @@
 	
     <div class='post-wrapper'>
       <article class="post reveal">
-  <section class="meta">
+    <section class="meta">
+        
+            <h2 class="title">
+                <a href="/2018/09/28/Hexo首页文章显示部分/">
+                    Hexo首页文章显示部分
+                </a>
+            </h2>
+        
+        <time>
+            9月 28, 2018
+        </time>
+        
     
-    <h2 class="title">
-      <a href="/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/">
-        《『乙女が結ぶ月夜の煌めき』 体験版》解包记录
-      </a>
-    </h2>
-    
-    <time>
-      9月 28, 2018
-    </time>
-		
+    <div class='cats'>
+        <a href="/categories/开发/">开发</a>
+    </div>
+
+    </section>
+    <section class="article typo">
+        
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+            <div class="readmore">
+                <a href="/2018/09/28/Hexo首页文章显示部分/">阅读全文</a>
+            </div>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/Hexo/">Hexo</a>
+                
+                    <a href="/tags/前端/">前端</a>
+                
+            </div>
+        
+    </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+    <section class="meta">
+        
+            <h2 class="title">
+                <a href="/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/">
+                    《『乙女が結ぶ月夜の煌めき』 体験版》解包记录
+                </a>
+            </h2>
+        
+        <time>
+            9月 28, 2018
+        </time>
+        
     
     <div class='cats'>
         <a href="/categories/Galgame/">Galgame</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>通过游戏目录的查看，可以明显发现arc文件是资源文件，猜测Rio及Rio1为文本文件。<br>首先尝试BandZip打开，明显不行23333333333</p>
-<p>经过几个工具的测试，最终确认GARbro对新手很友好，非常容易，效果也ok，针对此游戏可用。<br>直接提取到文件夹（此处建议解压到一个新的Rio文件夹中），发现文本为ws2文件，搜索如何解包</p>
-<p>使用Notepad++ 的HexEditor查看文件，初步怀疑文本经过加密，寻找可用工具<br>找到了FuckGalEngine项目下的ahdprc，github需要编译使用  </p>
-<p><strong>这里我最终使用了ahdprc命令行方式解包，但是GARbro相对没有编程基础的朋友更友好</strong></p>
-<p>把ahdprc和Rio.ws2放到同一文件夹执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ahdprc arc Rio.arc -u -c</span><br><span class="line">ahdprc ror -n 2 Rio\*.ws2</span><br></pre></td></tr></table></figure></p>
-<p>两行代码就可以，第二行为位移<br><strong>GARbro会提取之后自动位移，这也是为什么更友好的原因</strong><br>ahdprc的编译浪费了很久的时间，一个神奇的错误，最终使用了一个编译成功的exe，文章末附上</p>
-<p>以上解包arc完成，两种方法都可以，注意我解压的Rio1，重命名为Rio，名字不对不知为什么不可以解包。当然GARbro没有这个问题</p>
-<p>按照顺序运行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md txt</span><br><span class="line">md bin</span><br></pre></td></tr></table></figure></p>
-<p>创建两个文件夹  </p>
-<p><code>for %i in (Rio\*.ws2) do ahdprc ws2 -i %i -t txt\%~ni.txt -b bin\%~nxi</code><br><strong>不是批处理哦</strong><br>注意这里，如果你是使用我上面的代码输出当然不用担心，如果没有，而且没有解压到Rio文件夹中，那就要修改Rio为你的路径了。<br>这步成功之后查看txt文件夹，翻译即可</p>
-<p>格式就是空心原文实心译文  </p>
-<pre><code>for %i in (txt\*.txt) do ahdprc ws2 %i -o tf\%~nxi
-md Chs
-for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt
-</code></pre><p>此步生成的log.txt会记录具体哪些行需要在新的字体中表现出来，做替换列表</p>
-<p><code>ahdprc rep -l rep.txt tf\*.txt</code> 做好替换列表使用此命令进行替换</p>
-<p>替换之后再次使用<br><code>for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt</code><br>生成日志文件查看，循环直到正常为止  </p>
-<p>如果解包后文件存在非ws2文件，复制到Chs文件夹中，可以手动也可以继续命令行<br><code>copy Rio\Pan.dat Chs\Pan.dat</code>  </p>
-<p>最后一步，封包<br><code>ahdprc arc -r Chs -c</code></p>
-<p>至此，全部完成，但是替换列表目前不太清楚是什么，需要具体操作了。  </p>
-<p>2018/9/28 - 16:15</p>
+    </section>
+    <section class="article typo">
+        
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+            <div class="readmore">
+                <a href="/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/">阅读全文</a>
+            </div>
+        
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Galgame/">Galgame</a>
-      
-        <a href="/tags/技术/">技术</a>
-      
-        <a href="/tags/记录/">记录</a>
-      
-	  </div>
-    
-  </section>
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/Galgame/">Galgame</a>
+                
+                    <a href="/tags/技术/">技术</a>
+                
+                    <a href="/tags/记录/">记录</a>
+                
+            </div>
+        
+    </section>
 </article>
     </div>
   
@@ -177,47 +214,11 @@ for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; 
 </div>
 </section>
 
-  <section class='m_widget links'>
-<div class='header'>Links</div>
-<div class='content'>
-    <ul class="entry">
-    
-    </ul>
-</div>
-</section>
-
-  
-<div class="m_widget tagcloud">
-    <div class="header">Tags</div>
-    <div class='content'>
-        <a href="/tags/Galgame/" style="font-size: 14px; color: #808080">Galgame</a> <a href="/tags/技术/" style="font-size: 14px; color: #808080">技术</a> <a href="/tags/记录/" style="font-size: 14px; color: #808080">记录</a>
-    </div>
-</div>
-
-
-
       </aside>
       <script>setLoadingBarProgress(60);</script>
     </div>
   </div>
-  <footer id="footer" class="clearfix">
-
-	<div class="social-wrapper">
-  	
-      
-        <a href="/atom.xml" class="social rss"
-          target="_blank" rel="external">
-          <span class="icon icon-rss"></span>
-        </a>
-      
-    
-  </div>
   
-  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
-  
-</footer>
-
-
   <script>setLoadingBarProgress(80);</script>
   
 

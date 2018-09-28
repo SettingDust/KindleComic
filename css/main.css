@@ -1837,7 +1837,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe82e;
+  background: #70cbdd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2436,4 +2436,10 @@ body.mdui-loaded {
 }
 .main {
   background-color: #fff;
+  margin: 0 auto;
+  max-width: 1080px;
+  border-radius: 2px;
+}
+.footer {
+  position: unset;
 }

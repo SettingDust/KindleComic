@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>尘埃小屋</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-27T14:38:57.773Z</updated>
+  <updated>2018-09-28T08:15:37.884Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>SettingDust</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/09/27/Hello-World/"/>
-    <id>http://yoursite.com/2018/09/27/Hello-World/</id>
-    <published>2018-09-27T14:38:57.000Z</published>
-    <updated>2018-09-27T14:38:57.773Z</updated>
+    <title>《『乙女が結ぶ月夜の煌めき』 体験版》解包记录</title>
+    <link href="http://yoursite.com/2018/09/28/%E3%80%8A%E3%80%8E%E4%B9%99%E5%A5%B3%E3%81%8C%E7%B5%90%E3%81%B6%E6%9C%88%E5%A4%9C%E3%81%AE%E7%85%8C%E3%82%81%E3%81%8D%E3%80%8F-%E4%BD%93%E9%A8%93%E7%89%88%E3%80%8B%E8%A7%A3%E5%8C%85%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/</id>
+    <published>2018-09-28T04:05:00.000Z</published>
+    <updated>2018-09-28T08:15:37.884Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="一、寻找资源文件"><a href="#一、寻找资源文件" class="headerlink" title="一、寻找资源文件"></a>一、寻找资源文件</h4><hr><p>通过游戏目录的查看，可以明显发现arc文件是资源文件，猜测Rio及Rio1为文本文件。<br>首先尝试BandZip打开，明显不行23333333333</p><h4 id="二、解包"><a href="#二、解包" class="headerlink" title="二、解包"></a>二、解包</h4><hr><p>经过几个工具的测试，最终确认GARbro对新手很友好，非常容易，效果也ok，针对此游戏可用。<br>直接提取到文件夹（此处建议解压到一个新的Rio文件夹中），发现文本为ws2文件，搜索如何解包</p><p>使用Notepad++ 的HexEditor查看文件，初步怀疑文本经过加密，寻找可用工具<br>找到了FuckGalEngine项目下的ahdprc，github需要编译使用  </p><p><strong>这里我最终使用了ahdprc命令行方式解包，但是GARbro相对没有编程基础的朋友更友好</strong></p><p>把ahdprc和Rio.ws2放到同一文件夹执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ahdprc arc Rio.arc -u -c</span><br><span class="line">ahdprc ror -n 2 Rio\*.ws2</span><br></pre></td></tr></table></figure></p><p>两行代码就可以，第二行为位移<br><strong>GARbro会提取之后自动位移，这也是为什么更友好的原因</strong><br>ahdprc的编译浪费了很久的时间，一个神奇的错误，最终使用了一个编译成功的exe，文章末附上</p><p>以上解包arc完成，两种方法都可以，注意我解压的Rio1，重命名为Rio，名字不对不知为什么不可以解包。当然GARbro没有这个问题</p><p>按照顺序运行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md txt</span><br><span class="line">md bin</span><br></pre></td></tr></table></figure></p><p>创建两个文件夹  </p><p><code>for %i in (Rio\*.ws2) do ahdprc ws2 -i %i -t txt\%~ni.txt -b bin\%~nxi</code><br><strong>不是批处理哦</strong><br>注意这里，如果你是使用我上面的代码输出当然不用担心，如果没有，而且没有解压到Rio文件夹中，那就要修改Rio为你的路径了。<br>这步成功之后查看txt文件夹，翻译即可</p><p>格式就是空心原文实心译文  </p><pre><code>for %i in (txt\*.txt) do ahdprc ws2 %i -o tf\%~nximd Chsfor %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt</code></pre><p>此步生成的log.txt会记录具体哪些行需要在新的字体中表现出来，做替换列表</p><p><code>ahdprc rep -l rep.txt tf\*.txt</code> 做好替换列表使用此命令进行替换</p><p>替换之后再次使用<br><code>for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt</code><br>生成日志文件查看，循环直到正常为止  </p><p>如果解包后文件存在非ws2文件，复制到Chs文件夹中，可以手动也可以继续命令行<br><code>copy Rio\Pan.dat Chs\Pan.dat</code>  </p><p>最后一步，封包<br><code>ahdprc arc -r Chs -c</code></p><p>至此，全部完成，但是替换列表目前不太清楚是什么，需要具体操作了。  </p><p>2018/9/28 - 16:15</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h4 id=&quot;一、寻找资源文件&quot;&gt;&lt;a href=&quot;#一、寻找资源文件&quot; class=&quot;headerlink&quot; title=&quot;一、寻找资源文件&quot;&gt;&lt;/a&gt;一、寻找资源文件&lt;/h4&gt;&lt;hr&gt;
+&lt;p&gt;通过游戏目录的查看，可以明显发现arc文件是资源文件，猜测Rio及Rio1为文本文
+      
+    
     </summary>
     
+      <category term="Galgame" scheme="http://yoursite.com/categories/Galgame/"/>
+    
+    
+      <category term="Galgame" scheme="http://yoursite.com/tags/Galgame/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   

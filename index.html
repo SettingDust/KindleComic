@@ -301,167 +301,169 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/28/Hexo首页文章显示部分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SettingDust">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尘埃小屋">
-    </span>
-
+    <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     
-      <header class="post-header">
+    
+    
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/28/Hexo首页文章显示部分/">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/28/Hexo首页文章显示部分/" itemprop="url">
-                  Hexo首页文章显示部分
-                </a>
-              
-            
-          </h1>
-        
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="SettingDust">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.gif">
+      </span>
 
-        <div class="post-meta">
-          <span class="post-time">
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="尘埃小屋">
+      </span>
 
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-28 16:57:00 / 修改时间：21:07:44" itemprop="dateCreated datePublished" datetime="2018-09-28T16:57:00+08:00">2018-09-28</time>
-            
-
-            
-              
-
-              
-            
-          </span>
+      
+        <header class="post-header">
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
+          
+            <h1 class="post-title" itemprop="name headline">
+                  
+                  <a class="post-title-link" href="/2018/09/28/Hexo首页文章显示部分/" itemprop="url">
+                    Hexo首页文章显示部分
+                  </a>
+                
               
-                <span class="post-meta-item-text">分类于</span>
+            </h1>
+          
+
+          <div class="post-meta">
+            <span class="post-time">
+
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开发/" itemprop="url" rel="index"><span itemprop="name">开发</span></a></span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">发表于</span>
+                
 
                 
+                  
+                
+
+                <time title="创建时间：2018-09-28 16:57:00 / 修改时间：23:25:43" itemprop="dateCreated datePublished" datetime="2018-09-28T16:57:00+08:00">2018-09-28</time>
+              
+
+              
+                
+
                 
               
             </span>
-          
 
-          
             
-          
+              <span class="post-category" >
+              
+                <span class="post-meta-divider">|</span>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-folder-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">分类于</span>
+                
+                
+                  <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开发/" itemprop="url" rel="index"><span itemprop="name">开发</span></a></span>
 
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-          
-          
-          
+                  
+                  
+                
+              </span>
             
-          
-            
-          
-            
-          
-          
-            <p>Hexo首页的部分显示是通过文章之中<code>&lt;!--more--&gt;</code>来判断是否隐藏之后文本<br>网络搜寻一些方法可以实现，但是代码方面有些问题，自己实现一次，不算困难<br>这里使用的是material-flow主题<br>在post.ejs中可以看到<code>(post.excerpt || post.content)</code>这样一行代码，显示了文本内容，我只要在这里加一个判断即可<br>敲定显示2个换行符<br>代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (post.excerpt) &#123; %&gt;</span><br><span class="line">    &lt;%- post.excerpt %&gt;</span><br><span class="line">    &lt;div class=&quot;readmore&quot;&gt;</span><br><span class="line">        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;阅读全文&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;% &#125; else &#123; %&gt;</span><br><span class="line">    &lt;% let i = post.content.indexOf(&quot;\n&quot;), j = 0 %&gt;</span><br><span class="line">    &lt;% for(;j &lt; 1;j++)&#123; %&gt;</span><br><span class="line">        &lt;% i = post.content.indexOf(&quot;\n&quot;, i + 1) %&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">    &lt;% if(i &lt; 0 || !is_home()) &#123; %&gt;</span><br><span class="line">        &lt;%- post.content %&gt;</span><br><span class="line">    &lt;% &#125; else &#123; %&gt;</span><br><span class="line">        &lt;%- post.content.substring(0, i) %&gt;</span><br><span class="line">        &lt;div class=&quot;readmore&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;阅读全文&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
 
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/28/Hexo首页文章显示部分/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+            
+              
+            
+
+            
+            
+
+            
+
+            
+
+            
+
           </div>
-          <!--/noindex-->
-        
+        </header>
       
+
+      
+      
+      
+      <div class="post-body" itemprop="articleBody">
+
+        
+        
+
+        
+          
+            
+            
+            
+            
+            
+              
+            
+              
+            
+              
+            
+            
+              <p>Hexo首页的部分显示是通过文章之中<code>&lt;!--more--&gt;</code>来判断是否隐藏之后文本<br>网络搜寻一些方法可以实现，但是代码方面有些问题，自己实现一次，不算困难<br>这里是next主题<br>6.0之后的swig为开发带来很大困难，之前没有接触过，甚至没有开发过jade的经验，nodejs也不甚熟练<br>不过经过摸索还是成功了，可配置的显示多少行<br>代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% set content = post.content %&#125;</span><br><span class="line">&#123;% set i = post.content.indexOf(&quot;&lt;p&gt;&quot;) %&#125;</span><br><span class="line">&#123;% set arr = [] %&#125;</span><br><span class="line">&#123;% set arr.length = theme.auto_excerpt.length %&#125;</span><br><span class="line">&#123;% for item in arr %&#125;</span><br><span class="line">  &#123;% set i = content.indexOf(&quot;&lt;p&gt;&quot;, i + 1) %&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br><span class="line">&#123;% if i &lt; 0 %&#125;</span><br><span class="line">  &#123;&#123; content &#125;&#125;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">  &#123;&#123; content.substring(0, i)&#125;&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+
+            
+            <!--noindex-->
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/28/Hexo首页文章显示部分/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+            <!--/noindex-->
+          
+        
+      </div>
+
+      
+
+      
+      
+      
+
+      
+
+      
+
+      
+
+      <footer class="post-footer">
+        
+
+        
+
+        
+        
+          <div class="post-eof"></div>
+        
+      </footer>
     </div>
-
-    
-
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
+    </article>
   
-  
-  
-  </article>
 
 
     
@@ -475,162 +477,7 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SettingDust">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尘埃小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/28/《『乙女が結ぶ月夜の煌めき』-体験版》解包记录/" itemprop="url">
-                  《『乙女が結ぶ月夜の煌めき』 体験版》解包记录
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-28 12:05:00 / 修改时间：16:46:29" itemprop="dateCreated datePublished" datetime="2018-09-28T12:05:00+08:00">2018-09-28</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Galgame/" itemprop="url" rel="index"><span itemprop="name">Galgame</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>通过游戏目录的查看，可以明显发现arc文件是资源文件，猜测Rio及Rio1为文本文件。<br>首先尝试BandZip打开，明显不行23333333333</p>
-<p>经过几个工具的测试，最终确认GARbro对新手很友好，非常容易，效果也ok，针对此游戏可用。<br>直接提取到文件夹（此处建议解压到一个新的Rio文件夹中），发现文本为ws2文件，搜索如何解包</p>
-<p>使用Notepad++ 的HexEditor查看文件，初步怀疑文本经过加密，寻找可用工具<br>找到了FuckGalEngine项目下的ahdprc，github需要编译使用<br><strong>这里我最终使用了ahdprc命令行方式解包，但是GARbro相对没有编程基础的朋友更友好</strong></p>
-<p>把ahdprc和Rio.ws2放到同一文件夹执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ahdprc arc Rio.arc -u -c</span><br><span class="line">ahdprc ror -n 2 Rio\*.ws2</span><br></pre></td></tr></table></figure></p>
-<p>两行代码就可以，第二行为位移<br><strong>GARbro会提取之后自动位移，这也是为什么更友好的原因</strong><br>ahdprc的编译浪费了很久的时间，一个神奇的错误，最终使用了一个编译成功的exe，文章末附上</p>
-<p>以上解包arc完成，两种方法都可以，注意我解压的Rio1，重命名为Rio，名字不对不知为什么不可以解包。当然GARbro没有这个问题</p>
-<p>按照顺序运行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md txt</span><br><span class="line">md bin</span><br></pre></td></tr></table></figure></p>
-<p>创建两个文件夹  </p>
-<p><code>for %i in (Rio\*.ws2) do ahdprc ws2 -i %i -t txt\%~ni.txt -b bin\%~nxi</code><br><strong>不是批处理哦</strong><br>注意这里，如果你是使用我上面的代码输出当然不用担心，如果没有，而且没有解压到Rio文件夹中，那就要修改Rio为你的路径了。<br>这步成功之后查看txt文件夹，翻译即可</p>
-<p>格式就是空心原文实心译文  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for %i in (txt\*.txt) do ahdprc ws2 %i -o tf\%~nxi</span><br><span class="line">md Chs</span><br><span class="line">for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt</span><br></pre></td></tr></table></figure>
-<p>此步生成的log.txt会记录具体哪些行需要在新的字体中表现出来，做替换列表</p>
-<p><code>ahdprc rep -l rep.txt tf\*.txt</code> 做好替换列表使用此命令进行替换</p>
-<p>替换之后再次使用<br><code>for %i in (bin\*.ws2) do ahdprc ws2 -b %i -t tf\%~ni.txt -o Chs\%~nxi 1&gt;&gt; log.txt</code><br>生成日志文件查看，循环直到正常为止  </p>
-<p>如果解包后文件存在非ws2文件，复制到Chs文件夹中，可以手动也可以继续命令行<br><code>copy Rio\Pan.dat Chs\Pan.dat</code>  </p>
-<p>最后一步，封包<br><code>ahdprc arc -r Chs -c</code></p>
-<p>至此，全部完成，但是替换列表目前不太清楚是什么，需要具体操作了。  </p>
-<p>2018/9/28 - 16:15</p>
-
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
 
 
     

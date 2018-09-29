@@ -1837,7 +1837,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6bf6;
+  background: #ffab46;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2435,7 +2435,7 @@ body.mdui-loaded {
   font-size: 1rem;
 }
 .main {
-  padding-bottom: 120px;
+  padding-bottom: 0;
 }
 .footer {
   position: unset;
@@ -2514,4 +2514,58 @@ body.mdui-loaded {
 .post-button .mdui-btn:hover {
   color: #2196f3;
   background-color: rgba(33,150,243,0.1);
+}
+.sidebar {
+  background-color: #212121;
+  box-shadow: inset 2px 0 4px -1px rgba(0,0,0,0.2), inset 4px 0 5px 0 rgba(0,0,0,0.14), inset 1px 0 10px 0 rgba(0,0,0,0.12);
+}
+.back-to-top.mdui-fab {
+  bottom: -100px;
+  background-color: #212121;
+  color: #f1f1f1;
+}
+.back-to-top.back-to-top-on {
+  bottom: 24px;
+}
+@media (max-width: 600px) {
+  .main .mdui-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  .post-block.mdui-card-primary {
+    padding: 48px 24px 64px 24px;
+  }
+  .posts-expand {
+    margin: 0 12px;
+  }
+}
+.highlight,
+.highlight .gutter pre,
+.highlight .code pre {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  background-color: #212121;
+  color: #e8e8e8;
+}
+::-moz-selection {
+  background: #e0e0e0;
+  color: #212121;
+}
+::selection {
+  background: #e0e0e0;
+  color: #212121;
+}
+::-moz-selection {
+  background: #e0e0e0;
+  color: #212121;
+}
+::-webkit-selection {
+  background: #e0e0e0;
+  color: #212121;
+}
+.highlight td.gutter {
+  border-right: solid 1px #424242;
 }

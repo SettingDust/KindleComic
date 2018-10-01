@@ -1837,7 +1837,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffab46;
+  background: #28a1ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2568,4 +2568,8 @@ body.mdui-loaded {
 }
 .highlight td.gutter {
   border-right: solid 1px #424242;
+}
+.post-body hr {
+  border: solid 0.5px rgba(0,0,0,0.01);
+  margin: 12px 0;
 }

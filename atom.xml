@@ -125,11 +125,11 @@
       <category term="Galgame" scheme="http://yoursite.com/categories/Galgame/"/>
     
     
-      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
       <category term="Galgame" scheme="http://yoursite.com/tags/Galgame/"/>
     
       <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   

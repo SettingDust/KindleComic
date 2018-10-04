@@ -3,13 +3,52 @@
   
     
     <entry>
-      <title>嵌字记录(1)</title>
+      <title>字体对照</title>
+      <link href="/2018/10/04/%E5%AD%97%E4%BD%93%E5%AF%B9%E7%85%A7/"/>
+      <url>/2018/10/04/%E5%AD%97%E4%BD%93%E5%AF%B9%E7%85%A7/</url>
+      
+        <content type="html"><![CDATA[<p><strong>此处所有日文字体名为<a href="http://www.qiuziti.com" target="_blank" rel="noopener">此网站</a>搜索结果，并不为真实字体名。如果我寻找到真实名字会标注</strong><br>请参考字体具体样式选择对应字体，搜索结果未必准确！  </p><table><thead><tr><th>日文</th><th>原名</th><th>中文</th></tr></thead><tbody><tr><td><a href="http://www.qiuziti.com/download.html?id=ce2a4345495bd5df9d0fc59df9849446&amp;font=vx%7F%E5%BB%93%0Eg" target="_blank" rel="noopener">vx廓g</a></td><td><a href="http://www.17ziti.com/info/74472.html" target="_blank" rel="noopener">癸羊明朝</a></td><td><a href="http://www.xiazaiziti.com/55642.html" target="_blank" rel="noopener">汉仪昌黎宋刻本</a></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 汉化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌字 </tag>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>嵌字记录</title>
       <link href="/2018/10/04/%E5%B5%8C%E5%AD%97%E8%AE%B0%E5%BD%95-1/"/>
       <url>/2018/10/04/%E5%B5%8C%E5%AD%97%E8%AE%B0%E5%BD%95-1/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>最近过了某汉化组测试，做一些嵌字之类的工作<br>还是很有意思的，在这里做一些记录</p><hr><ul><li>嵌字最复杂的地方是抠图，我是用图章+板子手画，其实图章可以处理大部分，鼠绘像素级绘画即可，费时不多</li><li>嵌字要注意字符间距，通过调整 <code>段落-&gt;菜单-&gt;对齐-&gt;自动-&gt;120%</code>，段落其他为0即可。字符处行距为自动即可。这里我建议做一个动作</li><li>字体的寻找从<a href="http://www.qiuziti.com/" target="_blank" rel="noopener">这里</a>查看什么字体，<a href="http://www.17ziti.com/" target="_blank" rel="noopener">这里</a>寻找相似字体及名字，<a href="http://www.xiazaiziti.com" target="_blank" rel="noopener">这里</a>下载</li><li>搜索字体使用<a href="https://onlineocr.net/" target="_blank" rel="noopener">OCR</a>提取文本，注意调Language为Japanese</li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> 汉化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌字 </tag>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
       
     </entry>
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-01T06:59:01.259Z</updated>
+  <updated>2018-10-04T02:59:23.210Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>嵌字记录(1)</title>
+    <link href="http://yoursite.com/2018/10/04/%E5%B5%8C%E5%AD%97%E8%AE%B0%E5%BD%95-1/"/>
+    <id>http://yoursite.com/2018/10/04/嵌字记录-1/</id>
+    <published>2018-10-04T02:59:23.000Z</published>
+    <updated>2018-10-04T02:59:23.210Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于浏览器首页劫持的解决记录</title>
@@ -125,11 +139,11 @@
       <category term="Galgame" scheme="http://yoursite.com/categories/Galgame/"/>
     
     
+      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
       <category term="Galgame" scheme="http://yoursite.com/tags/Galgame/"/>
     
       <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="记录" scheme="http://yoursite.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   

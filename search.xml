@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>Tampermonkey+Webpack编译实现</title>
+      <link href="/2018/10/06/TamperMonkey+Webpack%E7%BC%96%E8%AF%91%E5%AE%9E%E7%8E%B0/"/>
+      <url>/2018/10/06/TamperMonkey+Webpack%E7%BC%96%E8%AF%91%E5%AE%9E%E7%8E%B0/</url>
+      
+        <content type="html"><![CDATA[<p>最近要写一个油猴插件，油猴的调试环境可以说是很差了，每次Ctrl+C、Ctrl+V的让人头痛，正好了解到webpack，就尝试一下搭建一个好些的环境<br>Userscript是需要一个header来做插件信息，调试时候使用<code>@require</code>调用本地js文件。<br>下面是测试构建结果(<a href="https://github.com/SettingDust/webpack-tampermonkey" target="_blank" rel="noopener">Github</a>)<br><strong>header.js</strong> 调试用脚本，复制内容到油猴即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// ==UserScript==</span><br><span class="line">// @name         Good Monkey</span><br><span class="line">// @version      0.0.1</span><br><span class="line">// @description  This is a good monkey</span><br><span class="line">// @author       SettingDust</span><br><span class="line">// @include      http*://tampermonkey.net/*</span><br><span class="line">//  </span><br><span class="line">// @require      https://cdn.bootcss.com/jquery/3.3.1/jquery.js</span><br><span class="line">// @require      E:\Codes\Web\webpack-tampermonkey\test\good-monkey.js</span><br><span class="line">//  </span><br><span class="line">// @grant        GM_addStyle</span><br><span class="line">//  </span><br><span class="line">// ==/UserScript==</span><br></pre></td></tr></table></figure></p><p>通过require可以调用本地文件，注意要给油猴本地访问的权限</p><hr><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><ul><li>Clone项目到本地</li><li>编辑<code>monkey.config.js</code> <strong>不需要编辑<code>monkey.dev.config.js</code></strong></li><li>执行<code>package.json</code>中的<code>test</code>脚本</li><li>快乐</li></ul><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li>使用<code>GM_addStyle(require(filename))</code>添加样式表</li><li>不需要<code>Ctrl+V</code>来测试</li><li>可以构建发布版本</li></ul><h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><ul><li><a href="https://github.com/momocow/webpack-tampermonkey" target="_blank" rel="noopener">webpack-tampermonkey</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Tampermonkey </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>字体对照</title>
       <link href="/2018/10/04/%E5%AD%97%E4%BD%93%E5%AF%B9%E7%85%A7/"/>
       <url>/2018/10/04/%E5%AD%97%E4%BD%93%E5%AF%B9%E7%85%A7/</url>
@@ -19,9 +44,9 @@
       
         <tags>
             
-            <tag> 嵌字 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 嵌字 </tag>
             
         </tags>
       
@@ -44,9 +69,9 @@
       
         <tags>
             
-            <tag> 嵌字 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 嵌字 </tag>
             
         </tags>
       
@@ -119,9 +144,9 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -144,11 +169,11 @@
       
         <tags>
             
-            <tag> 记录 </tag>
-            
             <tag> Galgame </tag>
             
             <tag> 技术 </tag>
+            
+            <tag> 记录 </tag>
             
         </tags>
       

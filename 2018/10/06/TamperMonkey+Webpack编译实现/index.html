@@ -108,14 +108,21 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="尘埃小屋">
-<meta property="og:url" content="http://yoursite.com/tags/C/index.html">
+  <meta name="description" content="最近要写一个油猴插件，油猴的调试环境可以说是很差了，每次Ctrl+C、Ctrl+V的让人头痛，正好了解到webpack，就尝试一下搭建一个好些的环境Userscript是需要一个header来做插件信息，调试时候使用@require调用本地js文件。下面是测试构建结果(Github)header.js 调试用脚本，复制内容到油猴即可12345678910111213// ==UserScript=">
+<meta name="keywords" content="前端,Tampermonkey">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tampermonkey+Webpack编译实现">
+<meta property="og:url" content="http://yoursite.com/2018/10/06/TamperMonkey+Webpack编译实现/index.html">
 <meta property="og:site_name" content="尘埃小屋">
+<meta property="og:description" content="最近要写一个油猴插件，油猴的调试环境可以说是很差了，每次Ctrl+C、Ctrl+V的让人头痛，正好了解到webpack，就尝试一下搭建一个好些的环境Userscript是需要一个header来做插件信息，调试时候使用@require调用本地js文件。下面是测试构建结果(Github)header.js 调试用脚本，复制内容到油猴即可12345678910111213// ==UserScript=">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-07T11:17:28.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="尘埃小屋">
+<meta name="twitter:title" content="Tampermonkey+Webpack编译实现">
+<meta name="twitter:description" content="最近要写一个油猴插件，油猴的调试环境可以说是很差了，每次Ctrl+C、Ctrl+V的让人头痛，正好了解到webpack，就尝试一下搭建一个好些的环境Userscript是需要一个header来做插件信息，调试时候使用@require调用本地js文件。下面是测试构建结果(Github)header.js 调试用脚本，复制内容到油猴即可12345678910111213// ==UserScript=">
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="尘埃小屋" type="application/atom+xml" />
@@ -123,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/C/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/06/TamperMonkey+Webpack编译实现/"/>
 
 
 
@@ -133,7 +140,7 @@
   };
 </script>
 
-  <title>标签: C# | 尘埃小屋</title>
+  <title>Tampermonkey+Webpack编译实现 | 尘埃小屋</title>
   
 
 
@@ -182,7 +189,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -242,16 +249,6 @@
   
     
 
-    
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -299,58 +296,200 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag mdui-card mdui-card-primary">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>C#<small>标签</small>
-        </h1>
+  
+
+  
+  
+  
+
+  
+
+
+  
+    <article class="mdui-card mdui-container post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    
+    
+    
+    <div class="post-block mdui-card-primary">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/TamperMonkey+Webpack编译实现/">
+
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="SettingDust">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.gif">
+      </span>
+
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="尘埃小屋">
+      </span>
+
+      
+        <header class="post-header">
+
+          
+          
+            <h1 class="post-title" itemprop="name headline">Tampermonkey+Webpack编译实现
+                
+              
+            </h1>
+          
+
+          <div class="post-meta">
+            <span class="post-time">
+
+              
+              
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">发表于</span>
+                
+
+                
+                  
+                
+
+                <time title="创建时间：2018-10-06 08:39:00" itemprop="dateCreated datePublished" datetime="2018-10-06T08:39:00+08:00">2018-10-06</time>
+              
+
+              
+                
+
+                
+                  
+                  <span class="post-meta-divider">|</span>
+                  
+
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-calendar-check-o"></i>
+                  </span>
+                  
+                    <span class="post-meta-item-text">更新于</span>
+                  
+                  <time title="修改时间：2018-10-07 19:17:28" itemprop="dateModified" datetime="2018-10-07T19:17:28+08:00">2018-10-07</time>
+                
+              
+            </span>
+
+            
+              <span class="post-category" >
+              
+                <span class="post-meta-divider">|</span>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-folder-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">分类于</span>
+                
+                
+                  <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开发/" itemprop="url" rel="index"><span itemprop="name">开发</span></a></span>
+
+                  
+                  
+                
+              </span>
+            
+
+            
+              
+            
+
+            
+            
+
+            
+
+            
+
+            
+
+          </div>
+        </header>
+      
+
+      
+      
+      
+      <div class="post-body" itemprop="articleBody">
+        
+        
+
+        
+          <p>最近要写一个油猴插件，油猴的调试环境可以说是很差了，每次Ctrl+C、Ctrl+V的让人头痛，正好了解到webpack，就尝试一下搭建一个好些的环境<br>Userscript是需要一个header来做插件信息，调试时候使用<code>@require</code>调用本地js文件。<br>下面是测试构建结果(<a href="https://github.com/SettingDust/webpack-tampermonkey" target="_blank" rel="noopener">Github</a>)<br><strong>header.js</strong> 调试用脚本，复制内容到油猴即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// ==UserScript==</span><br><span class="line">// @name         Good Monkey</span><br><span class="line">// @version      0.0.1</span><br><span class="line">// @description  This is a good monkey</span><br><span class="line">// @author       SettingDust</span><br><span class="line">// @include      http*://tampermonkey.net/*</span><br><span class="line">//  </span><br><span class="line">// @require      https://cdn.bootcss.com/jquery/3.3.1/jquery.js</span><br><span class="line">// @require      E:\Codes\Web\webpack-tampermonkey\test\good-monkey.js</span><br><span class="line">//  </span><br><span class="line">// @grant        GM_addStyle</span><br><span class="line">//  </span><br><span class="line">// ==/UserScript==</span><br></pre></td></tr></table></figure></p>
+<p>通过require可以调用本地文件，注意要给油猴本地访问的权限</p>
+<hr>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><ul>
+<li>Clone项目到本地</li>
+<li>编辑<code>monkey.config.js</code> <strong>不需要编辑<code>monkey.dev.config.js</code></strong></li>
+<li>执行<code>package.json</code>中的<code>test</code>脚本</li>
+<li>快乐</li>
+</ul>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>使用<code>GM_addStyle(require(filename))</code>添加样式表</li>
+<li>不需要<code>Ctrl+V</code>来测试</li>
+<li>可以构建发布版本</li>
+</ul>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><ul>
+<li><a href="https://github.com/momocow/webpack-tampermonkey" target="_blank" rel="noopener">webpack-tampermonkey</a></li>
+</ul>
+
+        
       </div>
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/29/C-作业-书籍阅读器/" itemprop="url">
-              
-                <span itemprop="name">C#作业 - 书籍阅读器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-29T09:38:22+08:00"
-              content="2018-09-29" >
-          09-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
 
       
+      
+      
+
+      
+
+      
+
+      
+
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/前端/" rel="tag">前端</a>
+            
+              <a href="/tags/Tampermonkey/" rel="tag">Tampermonkey</a>
+            
+          </div>
+        
+
+        
+        
+        
+
+        
+      </footer>
     </div>
+    
+    
+    
+    </article>
+  
+
 
   </div>
-  
-  
-  
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -371,8 +510,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢"><span class="nav-number">3.</span> <span class="nav-text">感谢</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -610,6 +774,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
